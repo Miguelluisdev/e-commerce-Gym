@@ -71,6 +71,7 @@ a:hover{
 .img-config:hover{
   width: 4.3rem;
   cursor: pointer;
+  animation: smooth;
 }
 .bg-dark{
   background-color: #050505;
@@ -79,13 +80,13 @@ a:hover{
 /* Define the keyframes animation */
 @keyframes backgroundLoop {
   0% {
-    background-image: url('../img/maxresdefault.jpg'); /* Initial background image */
+    background-image: url('../img/anastase-maragos-7kEpUPB8vNk-unsplash.jpg'); /* Initial background image */
   }
   25%{
     background-image: url("../img/header.jpg");
   }
   50%{
-    background-image: url("../img/cbum-bodybuilding.jpg");
+    background-image: url("../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
   }
   100% {
     background-image: url("../img/sa.jpg"); /* Back to the initial image at 7 seconds (100%) */
