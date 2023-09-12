@@ -137,6 +137,74 @@ a:hover{
 }
 
 /* fim config gerais */
+
+/* serviços */
+/* Estilize a seção */
+.services-section {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #050505; /* Cor de fundo genérica */
+}
+
+/* Estilize o título */
+.section-title {
+  font-size: 2.3rem;
+  color: #fff; /* Cor do título */
+}
+
+/* Estilize o subtitulo */
+.section-subtitle {
+  font-size:1.8rem;
+  color: #ebba34; /* Cor do subtitulo */
+  margin-bottom: 30px;
+}
+
+/* Estilize os cards */
+.service-card {
+  display: inline-block;
+  width: 300px;
+  background-color: #2a1d1dfe; /* Cor de fundo dos cards */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s; /* Efeito de transição no hover */
+}
+
+/* Efeito de zoom no hover */
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilize as imagens nos cards */
+.service-img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Estilize os títulos dos serviços */
+.service-title {
+  font-size: 18px;
+  color: #ebba34; /* Cor do título do serviço */
+  margin-top: 10px;
+}
+.services-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #050505; /* Cor de fundo genérica */
+}
+
+/* ... (estilos anteriores) ... */
+
+/* Estilize os parágrafos de resumo */
+.service-description {
+  font-size: 1.3rem;
+  color: #fff; /* Cor do texto do resumo */
+  margin-top: 10px;
+}
+/* fim serviçod */
 /* CSS */
 
 
@@ -174,6 +242,16 @@ a:hover{
 @media (max-width: 980px) {
   .hide-on-small-screens {
     display: none; /* Ocultar o elemento em telas menores */
+  }
+}
+@media (max-width: 378px) {
+  .services-section {
+    padding: 1.3rem;
+    align-items: center;
+  }
+  
+  .service-card {
+    margin-bottom: 20px;
   }
 }
 
