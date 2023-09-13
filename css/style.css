@@ -83,7 +83,7 @@ a:hover{
     background-image: url('../img/anastase-maragos-7kEpUPB8vNk-unsplash.jpg'); /* Initial background image */
   }
   25%{
-    background-image: url("../img/header.jpg");
+    background-image: url("../img/risen-wang-20jX9b35r_M-unsplash.jpg"); 
   }
   50%{
     background-image: url("../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
@@ -146,19 +146,19 @@ a:hover{
   width: 100%;
   height: 100%;
   padding: 2.5rem;
-  background-color: #050505; /* Cor de fundo genérica */
+  background-color: #050505; 
 }
 
 /* Estilize o título */
 .section-title {
   font-size: 2.3rem;
-  color: #fff; /* Cor do título */
+  color: #fff; 
 }
 
 /* Estilize o subtitulo */
 .section-subtitle {
   font-size:1.8rem;
-  color: #ebba34; /* Cor do subtitulo */
+  color: #ebba34; 
   margin-bottom: 30px;
 }
 
@@ -166,20 +166,18 @@ a:hover{
 .service-card {
   display: inline-block;
   width: 300px;
-  background-color: #2a1d1dfe; /* Cor de fundo dos cards */
+  background-color: #2a1d1dfe; 
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s; /* Efeito de transição no hover */
+  transition: transform 0.2s; 
 }
 
-/* Efeito de zoom no hover */
 .service-card:hover {
   transform: scale(1.05);
 }
 
-/* Estilize as imagens nos cards */
 .service-img {
   width: 100%;
   height: 100%;
@@ -191,19 +189,18 @@ a:hover{
   transform: scale(1.1);
 }
 
-/* Estilize os títulos dos serviços */
+
 .service-title {
   font-size: 24px;
-  color: #ebba34; /* Cor do título do serviço */
+  color: #ebba34; 
   margin-top: 10px;
 }
 .services-section {
   text-align: center;
   padding: 40px;
-  background-color: #050505; /* Cor de fundo genérica */
-}
+  background-color: #050505; 
+} 
 
-/* CSS */
 .button-5 {
   align-items: center;
   background-clip: padding-box;
@@ -250,13 +247,39 @@ a:hover{
 }
 
 
-/* Estilize os parágrafos de resumo */
 .service-description {
   font-size: 1.3rem;
-  color: #fff; /* Cor do texto do resumo */
+  color: #fff; 
   margin-top: 10px;
 }
-/* fim serviçod */
+/* fim serviços */
+
+/* scroll top */
+.scrollTop {
+  outline: none;
+  border: 0;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  padding: 8px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none; /* Inicialmente, ocultar o botão */
+}
+
+.scrollTop img {
+  width: 100%;
+  height: 100%;
+}
+
+.scrollTop.show {
+  display: block; /* Mostrar o botão quando necessário */
+}
+
+/* scroll top end */
 /* CSS */
 
 

@@ -11,7 +11,12 @@ toggle.addEventListener("click", () => {
     toggle.classList.replace("bi-eye-slash", "bi-eye");
   }
 });
+
+
+
 //  validação form login- cadastro usando poo com ajuda
+
+
 // Função para validar o cadastro e salvar os dados no localStorage
 function cadastrarUsuario() {
   const nome = document.getElementById('nome').value;
@@ -74,15 +79,29 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert("clique no seu nome para voltar a usar o site")
 });
 
-// // Função para exibir o alert de confirmação de cadastro
-// function exibirAlertCadastro() {
-//   const alertCadastro = document.getElementById('cadastroConcluidoAlert');
-//   alertCadastro.style.display = 'block';
 
-//   setTimeout(function () {
-//     alertCadastro.style.display = 'none';
-//   }, 5000); // O alert será ocultado automaticamente após 5 segundos
-// }
+// Seletor do botão e do documento
+const scrollToTopButton = document.querySelector('.scrollTop');
+const rootElement = document.documentElement;
 
-// Chame a função exibirAlertCadastro após o cadastro ser realizado com sucesso
-// Por exemplo, após chamar a função cadastrarUsuario() no seu código de cadastro
+// Função para rolar para o topo da página
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+// Adicione um ouvinte de eventos para verificar quando mostrar ou ocultar o botão
+window.addEventListener('scroll', () => {
+  if (rootElement.scrollTop > 100) {
+    // Exibir o botão quando o usuário rolar mais de 100px da parte superior
+    scrollToTopButton.classList.add('show');
+  } else {
+    // Ocultar o botão se o usuário estiver no topo da página
+    scrollToTopButton.classList.remove('show');
+  }
+});
+
+// Adicione um ouvinte de eventos para rolar para o topo quando o botão for clicado
+scrollToTopButton.addEventListener('click', scrollToTop);
