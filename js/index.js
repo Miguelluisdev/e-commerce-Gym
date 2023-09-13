@@ -92,7 +92,7 @@ function scrollToTop() {
   });
 }
 
-// Adicione um ouvinte de eventos para verificar quando mostrar ou ocultar o botão
+
 window.addEventListener('scroll', () => {
   if (rootElement.scrollTop > 100) {
     // Exibir o botão quando o usuário rolar mais de 100px da parte superior
@@ -103,5 +103,5 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Adicione um ouvinte de eventos para rolar para o topo quando o botão for clicado
+
 scrollToTopButton.addEventListener('click', scrollToTop);
