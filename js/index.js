@@ -74,19 +74,15 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert("clique no seu nome para voltar a usar o site")
 });
 
-// Função para exibir um modal de boas-vindas
-function exibirModalBoasVindas() {
-  const usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
+// // Função para exibir o alert de confirmação de cadastro
+// function exibirAlertCadastro() {
+//   const alertCadastro = document.getElementById('cadastroConcluidoAlert');
+//   alertCadastro.style.display = 'block';
 
-  if (usuarioSalvo) {
-    // Preencher o nome do usuário no modal de boas-vindas
-    document.querySelector('#cadastroConcluidoModal .modal-body').textContent =
-      `Bem-vindo, ${usuarioSalvo.nome}! Seu cadastro foi concluído com sucesso!`;
-    
-    // Abrir o modal de boas-vindas
-    document.getElementById('cadastroConcluidoModal').classList.add('show');
-  }
-}
+//   setTimeout(function () {
+//     alertCadastro.style.display = 'none';
+//   }, 5000); // O alert será ocultado automaticamente após 5 segundos
+// }
 
-// Exibir o modal de boas-vindas assim que a página carregar
-window.addEventListener('load', exibirModalBoasVindas);
+// Chame a função exibirAlertCadastro após o cadastro ser realizado com sucesso
+// Por exemplo, após chamar a função cadastrarUsuario() no seu código de cadastro
