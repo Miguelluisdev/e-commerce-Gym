@@ -78,10 +78,10 @@ a:hover{
   background-color: #050505;
 }
 
-/* Define the keyframes animation */
+
 @keyframes backgroundLoop {
   0% {
-    background-image: url('../img/anastase-maragos-7kEpUPB8vNk-unsplash.jpg'); /* Initial background image */
+    background-image: url('../img/anastase-maragos-7kEpUPB8vNk-unsplash.jpg'); 
   }
   25%{
     background-image: url("../img/risen-wang-20jX9b35r_M-unsplash.jpg"); 
@@ -90,10 +90,10 @@ a:hover{
     background-image: url("../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
   }
   100% {
-    background-image: url("../img/sa.jpg"); /* Back to the initial image at 7 seconds (100%) */
+    background-image: url("../img/sa.jpg"); /
   }
 }
-/* Style for the information bar */
+
 .information-bar {
   background-color: #ebba34;
   color: #fff;
@@ -101,20 +101,20 @@ a:hover{
   overflow: hidden;
 }
 
-/* Style for the information content */
+
 .information-content {
   display: flex;
-  animation: scroll 20s linear infinite; /* Adjust the animation duration as needed */
+  animation: scroll 20s linear infinite; 
 }
 
-/* Style for each individual info item */
+
 .info-item {
-  min-width: 200px; /* Adjust the width as needed */
+  min-width: 200px; 
   padding: 10px;
   text-align: center;
 }
 
-/* Keyframes animation for scrolling */
+
 @keyframes scroll {
   0% {
     transform: translateX(100%);
@@ -124,7 +124,6 @@ a:hover{
   }
 }
 
-/* Apply the animation to the section */
 .home {
   animation: backgroundLoop 10s linear  infinite;
   transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -141,7 +140,7 @@ a:hover{
 /* fim config gerais */
 
 /* serviços */
-/* Estilize a seção */
+
 .services-section {
   text-align: center;
   width: 100%;
@@ -150,20 +149,20 @@ a:hover{
   background-color: #050505; 
 }
 
-/* Estilize o título */
+
 .section-title {
   font-size: 2.3rem;
   color: #fff; 
 }
 
-/* Estilize o subtitulo */
+
 .section-subtitle {
   font-size:1.8rem;
   color: #ebba34; 
   margin-bottom: 30px;
 }
 
-/* Estilize os cards */
+
 .service-card {
   display: inline-block;
   width: 300px;
@@ -256,13 +255,13 @@ a:hover{
 /* fim serviços */
 
 /* modalidades */
-.img-mod{
+/* .img-mod{
   width: 30rem;
 }
 .img-mode{
   width: 20rem;
   height: 20rem;
-}
+} */
 .section-title2{
   font-size: 2.3rem;
   color: #fff; 
@@ -274,8 +273,6 @@ a:hover{
 }
 
 
-
-/* CSS */
 .button-85 {
   padding: 0.6em 2em;
   border: none;
@@ -357,9 +354,11 @@ a:hover{
 .scrollTop.show {
   display: block; /* Mostrar o botão quando necessário */
 }
-
+.hidden{
+  display: none;
+}
 /* scroll top end */
-/* CSS */
+
 
 
 
