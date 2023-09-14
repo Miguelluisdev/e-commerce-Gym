@@ -1,4 +1,5 @@
 /* resets */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
 :root{
   --cor1:#ebba34 ;
   --cor2:#050505 ;
@@ -10,6 +11,14 @@
 ::-webkit-scrollbar-thumb{
   background-color: #999;
   border-radius: 5px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
 }
 /* fim resets */
 /* configd gerais */
@@ -23,6 +32,8 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   font-size: 62,5%;
+  font-family: 'Lato', sans-serif;
+ font-family: 'Open Sans', sans-serif;
 
 }
 .navbar-brand{
@@ -255,13 +266,7 @@ a:hover{
 /* fim serviços */
 
 /* modalidades */
-/* .img-mod{
-  width: 30rem;
-}
-.img-mode{
-  width: 20rem;
-  height: 20rem;
-} */
+
 .section-title2{
   font-size: 2.3rem;
   color: #fff; 
@@ -272,7 +277,16 @@ a:hover{
   margin-bottom: 30px;
 }
 
-
+.modalidades{
+  background-color: #050505;
+}
+.modalidades h3{
+  font-size: 2.2rem;
+}
+.modalidades p{
+  font-size: 1.4rem;
+}
+/* CSS */
 .button-85 {
   padding: 0.6em 2em;
   border: none;
@@ -316,6 +330,17 @@ a:hover{
   border-radius: 10px;
 }
 
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 
 .button-85:after {
   z-index: -1;
@@ -327,6 +352,9 @@ a:hover{
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+.button-85:hover{
+  color: var(--cor1);
 }
 /* modalidades end */
 

@@ -1,0 +1,97 @@
+<div class="content1">
+    <div class="texto-principal">
+      <h1>Musculação</h1>
+      <p class="text2">A musculação é uma modalidade que visa o fortalecimento e desenvolvimento muscular. Os praticantes utilizam pesos livres e máquinas para trabalhar grupos musculares específicos, melhorar a força e a resistência muscular. É uma forma eficaz de melhorar a composição corporal e a saúde geral. Além disso, a musculação pode ajudar a aumentar a densidade óssea e a reduzir o risco de lesões.</p>
+    </div>
+    btn
+    <div class="imagem">
+      <img src="img/musculacao.jpg" alt="Musculação" width="600px" class="img1">
+    </div>
+  </div>
+
+  <!-- Segundo conteúdo - Yoga -->
+  <div class="content2">
+    <div class="imagem2">
+      <img src="img/yoga.jpg" alt="Yoga" width="400px">
+    </div>
+    <div class="texto-secundario">
+      <h1>Yoga</h1>
+      <p>
+        O Yoga é uma prática milenar que combina exercícios físicos, respiração e meditação para melhorar o equilíbrio, flexibilidade, força e bem-estar mental. Além de proporcionar benefícios físicos, o Yoga é conhecido por reduzir o estresse e melhorar a postura. Durante a prática, os praticantes concentram-se na respiração e no alinhamento do corpo, o que promove relaxamento e clareza mental. É uma ótima escolha para quem busca equilíbrio físico e mental.
+      </p>
+      btn
+    </div>
+  </div>
+
+css
+
+.modalidades .content1{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content1{
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+}
+
+.content1:hover{
+  border-color: var(--cor4);
+  background-color: #BF8450;
+}
+
+.modalidades  .texto-principal{
+  width: 50%;
+  padding: 0 40px;
+}
+
+.conteudo .texto-principal h1{
+  font-family: var(--fontitulo);
+  font-size: 2em;
+}
+
+.conteudo .imagem{
+  width: 50%;
+  border-radius: 10px;
+}
+
+  .conteudo .imagem img{
+    width: 100%;
+    padding: 10px;
+  }
+  /* conteudo 2 */
+
+.conteudo .content2{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.content2{
+  border: 1px solid transparent;
+  transition-duration: 0.3s;
+  background-color: var(--cor1);
+}
+
+.content2:hover{
+  border-color: var(--cor3);
+}
+
+
+.conteudo .texto-secundario{
+  width: 50%;
+  padding: 0 40px;
+}
+
+.conteudo .texto-secundario h1{
+  font-family: var(--fontitulo);
+  font-size: 2em;
+}
+.conteudo .imagem2{
+  width: 50%;
+  border-radius: 10px;
+}
+
+  .conteudo .imagem2 img{
+    width: 100%;
+    padding: 10px;
+  }
