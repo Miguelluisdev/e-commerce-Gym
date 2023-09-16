@@ -285,7 +285,56 @@
 <!-- modalidades end -->
 
 <!-- calculadora imc -->
+<div class="container1">
+  <div id="calc-container">
+    <h2>Calculadora de IMC</h2>
+    <form id="imc-form">
+      <div class="form-inputs">
+        <div class="form-control1">
+          <label for="height">Altura:</label>
+          <input
+            type="text"
+            name="height"
+            id="height"
+            placeholder="Exemplo 1,75"
+            required
+          />
+        </div>
+        <div class="form-control1">
+          <label for="weight">Peso:</label>
+          <input
+            type="text"
+            name="weight"
+            id="weight"
+            placeholder="Exemplo 70,5"
+          />
+        </div>
+      </div>
+      <div class="action-control">
+        <button id="calc-btn">Calcular</button>
+        <button id="clear-btn">Limpar</button>
+      </div>
+    </form>
+  </div>
+  <div id="result-container" class="hide">
+    <p id="imc-number">Seu IMC: <span></span></p>
+    <p id="imc-info">Situação atual: <span></span></p>
+    <h3>Confira as classificações</h3>
+    <div id="imc-table">
+      <div class="table-header">
+        <h4>IMC</h4>
+        <h4>Classificação</h4>
+        <h4>Obesity</h4>
+      </div>
+    </div>
+    <button id="back-btn">Voltar</button>
+  </div>
+</div> 
 <!-- calculadora imc end -->
+
+<!-- personal  -->
+
+<!-- personal end -->
 
 <!-- scroll top button -->
 <button class="scrollTop" id="scrollToTop">

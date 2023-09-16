@@ -21,6 +21,7 @@
   outline: none;
 }
 /* fim resets */
+
 /* configd gerais */
 body{
   -webkit-font-smoothing: antialiased ;
@@ -358,6 +359,162 @@ a:hover{
 }
 /* modalidades end */
 
+/* calc imc */
+
+.hide{
+  display: none !important;
+}
+.container1{
+  min-width: 90vw;
+  min-height: 90vh;
+  background-color: #050505;
+  padding: 2rem;
+  background-image: url(../img/imc-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0.5px);
+  border: none;
+}
+/* IMC FORM */
+#calc-container h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--cor1);
+}
+
+.form-inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-control1{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.form-control1 label{
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+  color: var(--cor1);
+  margin: 0 auto;
+}
+
+.form-control1 input{
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  width: 50%;
+}
+
+.action-control{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  flex: 1;
+  gap: 1rem;
+}
+
+button{
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  background-color: #002bff;
+  border: none;
+  cursor: pointer;
+  color: white;
+  opacity: 0.9;
+ gap: 1rem;
+ margin: 0 auto;
+}
+
+button:hover{
+  opacity: 1;
+}
+#clear-btn{
+  background-color: var(--cor1);
+  margin: 0 auto;
+}
+
+/* Table */
+#result-container {
+  text-align: center;
+  color: white;
+}
+
+#imc-number {
+  font-size: 2.4rem;
+  margin-bottom: 0.6rem;
+}
+
+#imc-info {
+  font-size: 2.1rem;
+  color: white;
+}
+
+#result-container h3 {
+  font-size: 2.3rem;
+  margin-top: 1rem;
+  color: var(--cor1);
+}
+
+#result-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#imc-table {
+  margin: 1.5rem 0;
+  font-size: 0.8rem;
+}
+
+.table-header {
+  font-weight: bold;
+  color: white;
+}
+
+.table-header,
+.table-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #7a00ff;
+  text-align: center;
+}
+
+.table-header h4,
+.table-data p {
+  flex: 1;
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+  max-width: 80px;
+}
+
+#back-btn {
+  align-self: center;
+}
+
+.good {
+  color: #12db34;
+}
+
+.low {
+  color: #dbce12;
+}
+
+.medium {
+  color: #db6212;
+}
+
+.high {
+  color: #db1912;
+}
+/* calc imc end */
+
+
 /* scroll top */
 .scrollTop {
   outline: none;
@@ -371,7 +528,7 @@ a:hover{
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  display: none; /* Inicialmente, ocultar o botão */
+  display: none; 
 }
 
 .scrollTop img {
@@ -380,7 +537,7 @@ a:hover{
 }
 
 .scrollTop.show {
-  display: block; /* Mostrar o botão quando necessário */
+  display: block; 
 }
 .hidden{
   display: none;
@@ -399,7 +556,7 @@ a:hover{
 
 
   .d-flex.flex-column.align-content-end.justify-content-between a {
-    margin-right: 20px; /* Espaçamento entre os ícones */
+    margin-right: 20px; 
   }
 
 }
@@ -410,19 +567,19 @@ a:hover{
   }
 
   .d-flex.flex-column.align-content-end.justify-content-between a {
-    margin-right: 20px; /* Espaçamento entre os ícones */
+    margin-right: 20px; 
   }
 
 
 }
-/* Classe para ocultar o botão e o texto em telas menores */
+
 .hide-on-small-screens {
-  display: block; /* Inicialmente, exibir o elemento */
+  display: block; /
 }
 
 @media (max-width: 980px) {
   .hide-on-small-screens {
-    display: none; /* Ocultar o elemento em telas menores */
+    display: none; 
   }
 }
 @media (max-width: 378px) {
