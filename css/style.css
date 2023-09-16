@@ -301,6 +301,7 @@ a:hover{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  margin-bottom: 1.4rem;
 }
 
 .button-85:before {
@@ -386,6 +387,7 @@ a:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-radius: 10px;
 }
 
 .form-control1{

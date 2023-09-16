@@ -7,9 +7,14 @@
   <!-- Importe os arquivos CSS e JavaScript do Bootstrap -->
   <!-- favicon -->
   <link rel="shortcut icon" href="img/icons8-academia-96.png" type="image/x-icon">
+
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -66,7 +71,7 @@
       
         <!--navlinks  -->
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav"  >
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -209,7 +214,7 @@
   
 <!-- home -->
 
- <section class="home bg-light">
+ <section class="home bg-light"  data-aos="fade-up" >
   <h2 class="text-lg-start text-white" > Redes Sociais</h2>
   <div class="d-flex flex-column align-content-start justify-content-between">
     <a href="https://www.instagram.com/migu3lluiz/" target="_blank" class="text-white mb-2"><img src="img/Instagram.svg" alt="Instagram" class="img-config"></a>
@@ -217,7 +222,7 @@
     <a href="https://www.youtube.com/@renatocariani" target="_blank" class="text-white mb-2"><img src="img/Youtube.svg" alt="YouTube" class="img-config img-ad"></a>
     <a href="https://twitter.com/MiguelL11294836" target="_blank" class="text-white mb-2"><img src="img/Twitter (1).svg" alt="" class="img-config img-ad"></a>
   </div>
-  <div class="btn-text-wrapper vh-100 d-flex flex-column justify-content-center align-items-center hide-on-small-screens">
+  <div class="btn-text-wrapper vh-100 d-flex flex-column justify-content-center align-items-center hide-on-small-screens"  data-aos="fade-up" >
     <h1 class="text-center text-white mb-4">Transforme-se com a força do ShapeMasters!</h1>
     <a href="#" class="btn btn-outline-info text-white btn-lg">Começar Agora</a>
   </div>
@@ -226,7 +231,7 @@
 
 <!-- sessão serviçoes -->
 
-<section class="services-section"  id="serviço">
+<section class="services-section"  id="serviço" data-aos="zoom-in-up" >
   <h2 class="section-title">Nossos Serviços</h2>
   <p class="section-subtitle">Escolha entre nossos serviços personalizados</p>
   <div class="service-card">
@@ -263,14 +268,14 @@
   <h2 class="section-title2 text-center">Modalidades</h2>
   <p class="section-subtitle2 text-center" style="color: #ebba34; font-family: 'Sua Fonte', sans-serif;">Escolha nossas Modalidades</p>
 
-  <div class="container mt-5">
+  <div class="container mt-5"  data-aos="fade-right">
       <div class="row">
           <div class="col-md-6">
               <img src="img/musculação.jpg" alt="Musculação" class="img-fluid">
               <h3 class="mt-3 shadow" style="color: #ebba34; font-family: 'Sua Fonte', sans-serif;">Musculação</h3>
               <p style="color: #fff; font-family: 'Sua Fonte', sans-serif;">A musculação é uma modalidade popular que envolve o uso de pesos livres e equipamentos de musculação para fortalecer e tonificar os músculos do corpo.</p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6" data-aos="fade-left" >
               <img src="img/yoga.jpg" alt="Yoga" class="img-fluid">
               <h3 class="mt-3 shadow" style="color: #ebba34; font-family: 'Sua Fonte', sans-serif;">Yoga</h3>
               <p style="color: #fff; font-family: 'Sua Fonte', sans-serif;">O yoga combina posturas, respiração e meditação para melhorar a flexibilidade, equilíbrio, relaxamento e bem-estar mental.</p>
@@ -285,7 +290,7 @@
 <!-- modalidades end -->
 
 <!-- calculadora imc -->
-<div class="container1">
+<div class="container1" data-aos="fade-up-right" >
   <div id="calc-container">
     <h2>Calculadora de IMC</h2>
     <form id="imc-form">
@@ -333,7 +338,7 @@
 <!-- calculadora imc end -->
 
 <!-- personal  -->
-<div class="container2" id="personais">
+<div class="container2" id="personais" data-aos="flip-right" >
   <div class="painel" style="background-image: url(../e-commerce-Gym/img/card1.jpg);" >
     <h3>Personal Trainer</h3>
   </div>
@@ -360,5 +365,9 @@
 
 
    <script src="js/index.js"></script> 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+    AOS.init();
+  </script>
 </body>
 </html>
