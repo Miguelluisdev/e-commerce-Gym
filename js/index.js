@@ -277,3 +277,18 @@ backBtn.addEventListener("click", (e) => {
   showOrHideResults();
 });
 
+// personal cards
+
+const paineis = document.querySelectorAll(".painel");
+
+paineis.forEach((painel) => {
+  painel.addEventListener("click", () => {
+    removeActiveClasses()
+  })
+})
+
+function removeActiveClasses(){
+  paineis.forEach(painel => {
+    painel.classList.remove("active")
+  })
+}
