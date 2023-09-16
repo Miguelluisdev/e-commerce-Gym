@@ -400,6 +400,7 @@ a:hover{
   margin-bottom: 0.6rem;
   color: var(--cor1);
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 .form-control1 input{
