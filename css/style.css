@@ -372,7 +372,7 @@ a:hover{
   background-image: url(../img/imc-image.png);
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(0.5px);
+  /* filter: blur(0.5px); */
   border: none;
 }
 /* IMC FORM */
