@@ -292,3 +292,19 @@ function removeActiveClasses(){
     painel.classList.remove("active")
   })
 }
+// depoiment cards
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+}
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Avançar automaticamente os slides a cada 5 segundos
+setInterval(nextSlide, 5000);

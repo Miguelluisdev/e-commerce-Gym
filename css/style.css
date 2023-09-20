@@ -622,6 +622,76 @@ height: 90vh;
 }
 /* princing card end */
 
+/* depoiment card slider */
+
+/* Estilos para o slider */
+.bg{
+  background-color: #111;
+}
+.estiling{
+  color: var(--cor1);
+}
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #050505;
+  color: white;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+p {
+  font-size: 18px;
+}
+
+.author {
+  font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+  .slide {
+      flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .slide {
+      flex: 0 0 100%;
+  }
+}
+
+
+/* depoiment card slider end */
+
+/* contact  */
+.container45{
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contact end */
+
 /* scroll top */
 .scrollTop {
   outline: none;
