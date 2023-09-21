@@ -80,7 +80,7 @@
               <a class="nav-link" href="#modalidades">Modalidades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Depoimentos</a>
+              <a class="nav-link" href="#depoiment">Depoimentos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#serviço">Serviços</a>
@@ -94,7 +94,7 @@
               <a class="nav-link" href="#planos">Planos</a>
             </li>
             <li class="nav-item active ">
-              <a class="nav-link btn btn-dark" href="#">Contatos</a>
+              <a class="nav-link btn btn-dark" href="#contact">Contatos</a>
             </li>
 
           </ul>
@@ -126,8 +126,8 @@
         <form id="loginForm"> 
           <!-- Campos do formulário aqui -->
           <div class="mb-3">
-            <label for="email" class="form-label text-dark">Email</label>
-            <input type="email" class="form-control" id="email" required>
+            <label for="emaili" class="form-label text-dark">Email</label>
+            <input type="email" class="form-control" id="emaili" required>
           </div>
           <div class="mb-3">
             <label for="senha" class="form-label text-dark">Senha</label>
@@ -407,7 +407,7 @@
 </div>
 <!-- pricing card end -->
 
-<!-- depoiment card slider --><div class="bg" data-aos="zoom-in-down" >
+<!-- depoiment card slider --><div class="bg" data-aos="zoom-in-down" id="depoiment" >
     <h1 class="text-center estiling" >Depoimentos</h1>
   <div class="slider-container">
     <div class="slider">
@@ -438,13 +438,13 @@
 <!-- depoimetn card slider end -->
 
 <!-- contac page -->
-<div class="container45">
-  <form action="">
+<div class="container45" id="contact">
+  <form  action="https://formsubmit.co/grimmpiratapirata@gmail.com" method="POST" class="form-cs">
     <h3>Contato</h3>
-    <input type="text" id="name" placeholder="Digite Seu Nome" required>
-    <input type="email" id="email" placeholder="Digite seu email" required>
-    <input type="number" id="phone" placeholder="Digite seu numero" required>
-    <textarea name="message" id="message"  rows="4" placeholder="Sua Duvida"></textarea>
+    <input type="text"  name="name" class="input-contact" placeholder="Digite Seu Nome" required>
+    <input type="email"  name="email" class="input-contact" placeholder="Digite seu email" required>
+    <input type="number"  name="phone" class="input-contact" placeholder="Digite seu numero" required>
+    <textarea name="message" id="message" class="text-message" rows="4" placeholder="Sua Duvida"></textarea>
     <button type="submit" >Enviar</button>
   </form>
 </div>
