@@ -1,20 +1,4 @@
 
-const toggle = document.querySelector(".toggle");
-const input = document.querySelector("#senha");
-
-toggle.addEventListener("click", () => {
-  if (input.type === "password") {
-    input.type = "text";
-    toggle.classList.replace("bi-eye", "bi-eye-slash");
-  } else {
-    input.type = "password";
-    toggle.classList.replace("bi-eye-slash", "bi-eye");
-  }
-});
-
-
-
-//  validação form login- cadastro usando poo com ajuda
 
 
 // Função para validar o cadastro e salvar os dados no localStorage
@@ -40,7 +24,7 @@ function cadastrarUsuario() {
   localStorage.setItem('usuario', JSON.stringify(usuario));
 
   // Fechar o modal de cadastro automaticamente (não é mais necessário remover classes manualmente)
-  document.getElementById('cadastroConcluidoModal').classList.add('show');
+   document.getElementById('cadastroConcluidoModal').classList.add('show');
 }
 
 
@@ -308,3 +292,30 @@ function updateSlider() {
 
 // Avançar automaticamente os slides a cada 5 segundos
 setInterval(nextSlide, 5000);
+
+// btn location
+document.getElementById("btn-mod").addEventListener("click", function(){
+  window.location = "./src/modalidades.html"
+})
+
+// contact form
+function validateForm() {
+  const name = document.forms["contactForm"]["name"].value;
+  const email = document.forms["contactForm"]["email"].value;
+  const message = document.forms["contactForm"]["message"].value;
+  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+  // Verifique se os campos obrigatórios estão preenchidos
+  if (name === "" || email === "" || message === "") {
+    alert("Por favor, preencha todos os campos obrigatórios.");
+    return false; // Impede o envio do formulário
+  }
+
+  // Valide o formato do email usando regex
+  if (!email.match(emailRegex)) {
+    alert("Por favor, insira um endereço de email válido.");
+    return false; // Impede o envio do formulário
+  }
+
+
+}

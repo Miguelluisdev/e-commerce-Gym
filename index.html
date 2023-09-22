@@ -87,9 +87,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#personais">Personais</a>
-            </li>  <li class="nav-item">
-              <a class="nav-link" href="#">Avaliações</a>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link" href="#planos">Planos</a>
             </li>
@@ -127,7 +125,7 @@
           <!-- Campos do formulário aqui -->
           <div class="mb-3">
             <label for="emaili" class="form-label text-dark">Email</label>
-            <input type="email" class="form-control" id="emaili" required>
+            <input type="email" class="form-control" id="email" required>
           </div>
           <div class="mb-3">
             <label for="senha" class="form-label text-dark">Senha</label>
@@ -243,7 +241,7 @@
     <p class="service-description">
       Nosso Plano de Treino personalizado foi projetado para atender às suas metas e necessidades específicas de fitness. Com orientação profissional, você alcançará resultados incríveis em pouco tempo.
     </p>
-    <button class="button-5" role="button">Contratar serviço</button>
+    <a href="#planos"><button class="button-5" role="button">Contratar serviço</button></a>
   </div>
   <div class="service-card">
     <img src="img/mr-lee-f4RBYsY2hxA-unsplash.jpg" alt="Fisioterapia" class="service-img">
@@ -251,7 +249,7 @@
     <p class="service-description">
       Nossa equipe de fisioterapeutas altamente qualificados está pronta para ajudá-lo a recuperar-se de lesões e melhorar sua mobilidade. Oferecemos tratamentos personalizados para uma recuperação rápida e eficaz.
     </p>
-    <button class="button-5" role="button">Contratar serviço</button>
+    <a href="#planos"><button class="button-5" role="button">Contratar serviço</button></a>
   </div>
   <div class="service-card">
     <img src="img/jonathan-borba-R0y_bEUjiOM-unsplash.jpg" alt="Personal Trainer" class="service-img">
@@ -259,7 +257,7 @@
     <p class="service-description">
       Trabalhe com nossos experientes Personal Trainers para atingir seus objetivos de fitness. Eles criarão um plano de treino sob medida e fornecerão orientação especializada para maximizar seu potencial.
     </p>
-    <button class="button-5" role="button">Contratar serviço</button>
+    <a href="#planos"><button class="button-5" role="button">Contratar serviço</button></a>
   </div>
 </section>
 <!-- serviço end -->
@@ -287,8 +285,7 @@
   </div>
 
   <div class="d-flex justify-content-center text-center">
-      <a href="src/modalidades.html"><button class="button-85" role="button" style="background-color: #ebba34; color: #fff; font-family: 'Sua Fonte', sans-serif;">Veja Todas As Modalidades</button></a>
-  </div>
+    <button class="button-85" id="btn-mod" role="button" style="background-color: #ebba34; color: #fff; font-family: 'Sua Fonte', sans-serif;">Veja Todas As Modalidades</button>
 </section>
 <!-- modalidades end -->
 
@@ -441,6 +438,7 @@
 <div class="container45" id="contact">
   <form  action="https://formsubmit.co/grimmpiratapirata@gmail.com" method="POST" class="form-cs">
     <h3>Contato</h3>
+    <input type="hidden" name="_next" value="http://127.0.0.1:5502/e-commerce-Gym/index.html"> <!--depois mudar o envio apos hospedar-->
     <input type="text"  name="name" class="input-contact" placeholder="Digite Seu Nome" required>
     <input type="email"  name="email" class="input-contact" placeholder="Digite seu email" required>
     <input type="number"  name="phone" class="input-contact" placeholder="Digite seu numero" required>
@@ -450,6 +448,102 @@
 </div>
 
 <!-- contact page end -->
+
+
+<!-- faq  -->
+
+<div class="container mt-5 bg-dark">
+  <h1 class="text-center text-white">Perguntas Frequentes</h1>
+
+  <div class="accordion" id="faqAccordion">
+      <!-- Pergunta 1 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button faq-card-header bg-dark " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Pergunta 1: O que é ShapeMasters Academy?
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-card bg-dark text-white">
+                  A ShapeMasters Academy é uma academia de fitness premium com instalações de última geração e treinadores altamente qualificados. Oferecemos uma variedade de programas de treinamento para atender às necessidades de nossos clientes.
+              </div>
+          </div>
+      </div>
+
+      <!-- Pergunta 2 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button faq-card-header collapsed bg-dark " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Pergunta 2: Quais são os horários de funcionamento?
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-card bg-dark text-white">
+                  Nossos horários de funcionamento variam de acordo com a localização. Recomendamos verificar nosso site ou entrar em contato conosco para obter informações atualizadas sobre horários.
+              </div>
+          </div>
+      </div>
+
+      <!-- Pergunta 3 -->
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button faq-card-header collapsed bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Pergunta 3: Como posso me inscrever?
+              </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-card bg-dark text-white">
+                  Você pode se inscrever pessoalmente em uma de nossas filiais ou preenchendo o formulário de inscrição em nosso site. Nossa equipe terá prazer em ajudá-lo no processo de inscrição.
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- faq end -->
+
+
+<!-- footer -->
+<footer>
+  <div class="container-footer">
+      <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+              <h4>Empresa</h4>
+              <ul>
+                  <li><a href="#"> Quem somos </a></li>
+                  <li><a href=""> nossos serviços </a></li>
+                  <li><a href=""> política de privacidade </a></li>
+                  <li><a href=""> programa de afiliados</a></li>
+              </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+              <h4>Obter ajuda</h4>
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Transporte</a></li>
+                  <li><a href="#">devoluções</a></li>
+                  <li><a href="#">Status De Pedido</a></li>
+                  <li><a href="#">Opções De Pagamento</a></li>
+              </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+              <div class="medias-socias">
+                  <a href="https://pt-br.facebook.com/business/learn"> <i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.instagram.com/migu3lluiz/"> <i class="ri-instagram-fill"></i> </a>
+                  <a href="https://twitter.com/MiguelL11294836"> <i class="ri-twitter-x-fill"></i> </a>
+                  <a href="https://www.youtube.com/@renatocariani"> <i class="ri-youtube-fill"></i> </a>
+              </div>
+
+          </div>
+          <!--end footer col-->
+      </div>
+  </div>
+</footer>
+<!-- footer end -->
 
 <!-- scroll top button -->
 <button class="scrollTop" id="scrollToTop">
