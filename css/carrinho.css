@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap');
+
+body{
+  font-family: Arial, Helvetica, sans-serif;-webkit-font-smoothing: antialiased ;
+  -moz-osx-font-smoothing: grayscale ;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "salt" ,"ss01", "ss03", "cv01","cv02", "cv03", "cv04", "cv05", "cv06" , "cv09" , "cv10";
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 62,5%;
+  font-family: 'Lato', sans-serif;
+ font-family: 'Open Sans', sans-serif;
+}
+
+header{
+  background-color: #050505;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.plan{
+  border: 1px solid #ccc;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+button.add-to-cart{
+  background-color:#ebba34;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+button.add-to-cart:hover {
+  background-color: #0056b3;
+  color: #ebba34;
+  filter: blur(0.5px);
+}
+
+aside{
+  background-color: #ebba34;
+  color: #050505;
+  padding: 1.8rem;
+  border: 1px solid #ccc;
+}
+
+
+ul#cart {
+  list-style-type: none;
+  padding: 0;
+}
+
+#checkout {
+  background-color: #131111b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+#checkout:hover {
+  background-color: #1e7e34;
+}
