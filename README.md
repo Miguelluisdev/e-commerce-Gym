@@ -21,6 +21,6 @@ plano de treino
 validar melhor os forms
 validação no carrinho de compras
 
-
+este site sera usado no projeto do 2 periodo da faculdade de ADS na unisuam, o projeto consiste em hospedar o site na nuvem, AWS amazon
 Link para o site
 <a href="https://miguelluisdev.github.io/e-commerce-Gym/" >Site</a>
