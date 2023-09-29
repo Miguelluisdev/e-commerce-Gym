@@ -74,3 +74,22 @@ ul#cart {
 #checkout:hover {
   background-color: #1e7e34;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column; /* Empilhar os elementos verticalmente */
+  }
+
+  .plan {
+    width: 100%; /* Usar largura total na tela menor */
+    margin-bottom: 20px; /* Espaçamento entre os planos */
+  }
+
+  button.add-to-cart {
+    width: 100%; /* Largura total para o botão */
+  }
+
+  aside {
+    padding: 1rem; /* Reduzir o espaçamento no lado direito */
+  }
+}
