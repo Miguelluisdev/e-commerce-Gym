@@ -1046,7 +1046,7 @@ footer{
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 300px) {
 
   .horarios {
     padding: 80px 0;
@@ -1080,7 +1080,7 @@ footer{
   }
   
   .horarios .conteudo .texto img {
-    width: 100%;
+    width: 50%;
     transform: rotateY(180deg);
   }
   
