@@ -1046,7 +1046,7 @@ footer{
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
   .horarios {
     padding: 80px 0;
@@ -1113,6 +1113,7 @@ footer{
     color: #ffffff;
     border-color: transparent;
   }
+
   .horarios .conteudo{
     flex-wrap: wrap;
   }
