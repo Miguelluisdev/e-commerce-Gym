@@ -1,3 +1,4 @@
+//  import fazerLogin from "./index.js";
 document.addEventListener("DOMContentLoaded", function () {
     const addToCartButtons = document.querySelectorAll(".add-to-cart");
     const cartList = document.getElementById("cart");
@@ -52,5 +53,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Inicializa o carrinho na página
     updateCart();
+    
+      // fazerLogin = localStorage.getItem('usuario');
+    
+      // if (!fazerLogin) {
+      //   alert("Você precisa estar logado para fazer compras.");
+      //   window.location = "../index.html"; // Redireciona para a página de login
+      // }
   });
   

@@ -35,7 +35,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function (e) 
 });
 
 // Função para validar o login
-function fazerLogin() {
+ export  default function fazerLogin() {
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
 
