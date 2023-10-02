@@ -1046,7 +1046,7 @@ footer{
   }
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
 
   .horarios {
     padding: 80px 0;
