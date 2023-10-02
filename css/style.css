@@ -121,8 +121,17 @@ a:hover{
   25%{
     background-image: url("../img/risen-wang-20jX9b35r_M-unsplash.jpg"); 
   }
+  30%{
+    background-image: url(../img/ginasio-com-equipamento-de-ciclismo-indoor.jpg);
+  }
+  40%{
+        background-image: url(../img/gym-3.jpg);
+  }
   50%{
     background-image: url("../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
+  }
+  90%{
+      background-image: url(../img/gym-2.jpg);
   }
   100% {
     background-image: url("../img/sa.jpg"); /
@@ -161,9 +170,11 @@ a:hover{
 
 .home {
   animation: backgroundLoop 10s linear  infinite;
-  transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: cubic-bezier(0.40, 0.48, 0.50, 1);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .info-text{
