@@ -768,6 +768,76 @@ p {
 }
 /* FAQ end */
 
+/* table gym */
+/* Estilos para a seção de Horários das Aulas */
+.horarios {
+  padding: 80px 0;
+   color: white;
+}
+
+.horarios .conteudo {
+  display: flex;
+}
+
+.horarios .conteudo .caixa {
+  flex: 0 0 50%;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.horarios .conteudo .texto h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--cor1);
+  padding: 0 0 20px;
+}
+
+.horarios .conteudo .texto p {
+  font-size: 15px;
+  line-height: 20px;
+  color: white;
+  margin: 0;
+  padding: 0 0 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.horarios .conteudo .texto img {
+  width: 100%;
+  transform: rotateY(180deg);
+}
+
+.horarios .conteudo .horarios .tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.horarios .conteudo .horarios .tabela td {
+  border: 1px solid #dfdfdf;
+  padding: 8px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.horarios .conteudo .horarios .tabela tr:nth-child(even) td.dia {
+  background-color: #222222;
+}
+
+.horarios .conteudo .horarios .tabela tr:nth-child(odd) td.dia {
+  background-color: #444444;
+}
+
+.horarios .conteudo .horarios .tabela tr:nth-child(1) td.dia {
+  background-color: #c11325;
+}
+
+.horarios .conteudo .horarios .tabela tr td.dia {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* table gym end */
+
 /* footer */
 
 footer{
@@ -973,5 +1043,15 @@ footer{
 @media (max-width: 576px) {
   .slide {
       flex: 0 0 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .horarios .conteudo{
+    flex-wrap: wrap;
+  }
+  .horarios .conteudo .caixa{
+  flex: 0 0 100%;
+      max-width: 100%;	
   }
 }
