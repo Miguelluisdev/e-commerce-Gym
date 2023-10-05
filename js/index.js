@@ -299,23 +299,44 @@ document.getElementById("btn-mod").addEventListener("click", function(){
 })
 
 // contact form
-function validateForm() {
-  const name = document.forms["contactForm"]["name"].value;
-  const email = document.forms["contactForm"]["email"].value;
-  const message = document.forms["contactForm"]["message"].value;
-  const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
-
-  // Verifique se os campos obrigatórios estão preenchidos
-  if (name === "" || email === "" || message === "") {
-    alert("Por favor, preencha todos os campos obrigatórios.");
-    return false; // Impede o envio do formulário
+class FormValidator {
+  constructor(form) {
+    this.form = form;
+    this.emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    this.init();
   }
 
-  // Valide o formato do email usando regex
-  if (!email.match(emailRegex)) {
-    alert("Por favor, insira um endereço de email válido.");
-    return false; // Impede o envio do formulário
+  init() {
+    this.form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (this.validate()) {
+        this.form.submit();
+        alert("email enviado com sucesso")
+      }
+    });
   }
 
+  validate() {
+    const name = this.form.elements["name"].value;
+    const email = this.form.elements["email"].value;
+    const message = this.form.elements["message"].value;
 
+    // Verifique se os campos obrigatórios estão preenchidos
+    if (name === "" || email === "" || message === "") {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return false;
+    }
+
+    // Valide o formato do email usando regex
+    if (!email.match(this.emailRegex)) {
+      alert("Por favor, insira um endereço de email válido.");
+      return false;
+    }
+
+    return true;
+  }
 }
+
+const contactForm = document.forms["contactForm"];
+const validator = new FormValidator(contactForm);
+console.log(validator)
