@@ -2,6 +2,7 @@
 
 
 // Função para validar o cadastro e salvar os dados no localStorage
+// Função para validar o cadastro e salvar os dados no localStorage
 function cadastrarUsuario() {
   const nome = document.getElementById('nome').value;
   const emailCadastro = document.getElementById('emailCadastro').value;
@@ -24,9 +25,8 @@ function cadastrarUsuario() {
   localStorage.setItem('usuario', JSON.stringify(usuario));
 
   // Fechar o modal de cadastro automaticamente (não é mais necessário remover classes manualmente)
-   document.getElementById('cadastroConcluidoModal').classList.add('show');
+  document.getElementById('cadastroConcluidoModal').classList.add('show');
 }
-
 
 // Evento de clique no botão de cadastro
 document.getElementById('cadastroForm').addEventListener('submit', function (e) {
@@ -35,7 +35,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function (e) 
 });
 
 // Função para validar o login
- export  default function fazerLogin() {
+function fazerLogin() {
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
 
@@ -49,17 +49,26 @@ document.getElementById('cadastroForm').addEventListener('submit', function (e) 
   // Preencher o nome do usuário no ícone de usuário
   document.querySelector('.users .nav-link i').textContent = usuarioSalvo.nome;
 
+  // Salvar o nome do usuário no localStorage
+  localStorage.setItem('nomeUsuario', usuarioSalvo.nome);
+
   // Fechar o modal de login automaticamente
   document.getElementById('loginModal').classList.remove('show');
   document.body.classList.remove('modal-open');
   document.querySelector('.modal-backdrop').remove();
 }
 
+// Recuperar o nome do usuário do localStorage e preencher o ícone do usuário
+const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
+if (nomeUsuarioSalvo) {
+  document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
+}
+
 // Evento de clique no botão de login
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   fazerLogin();
-  alert("clique no seu nome para voltar a usar o site")
+  alert("Clique no seu nome para voltar a usar o site");
 });
 
 
@@ -340,3 +349,34 @@ class FormValidator {
 const contactForm = document.forms["contactForm"];
 const validator = new FormValidator(contactForm);
 console.log(validator)
+
+// Função para exibir a notificação
+function showNotification() {
+  const notification = document.querySelector('.notification');
+  notification.style.display = 'block';
+}
+
+// Fechar a notificação
+document.querySelector('#close').addEventListener('click', function() {
+  const notification = document.querySelector('.notification');
+  notification.style.display = 'none';
+});
+
+// Calcule o tempo restante até o próximo dia
+function calculateTimeUntilNextDay() {
+  const now = new Date();
+  const tomorrow = new Date(now);
+  tomorrow.setDate(now.getDate() + 1);
+  tomorrow.setHours(9); // Define a hora da sessão de treinamento no próximo dia
+
+  const timeUntilTomorrow = tomorrow - now;
+  return timeUntilTomorrow;
+}
+
+// Agende o lembrete para ser exibido
+const timeUntilTomorrow = calculateTimeUntilNextDay();
+// Agende o lembrete para ser exibido (no exemplo, após 3 segundos)
+setInterval(() => {
+  timeUntilTomorrow
+  showNotification();
+}, 40000);

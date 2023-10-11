@@ -1135,3 +1135,23 @@ footer{
 
 
 }
+
+.notification {
+  background-color: var(--cor2);
+  color: var(--cor1);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+#close {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
