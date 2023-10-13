@@ -379,4 +379,4 @@ const timeUntilTomorrow = calculateTimeUntilNextDay();
 setInterval(() => {
   timeUntilTomorrow
   showNotification();
-}, 40000);
+}, 60000);
