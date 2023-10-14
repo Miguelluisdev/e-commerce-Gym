@@ -1,13 +1,11 @@
 
-
-// Função para validar o cadastro e salvar os dados no localStorage
 // Função para validar o cadastro e salvar os dados no localStorage
 function cadastrarUsuario() {
   const nome = document.getElementById('nome').value;
   const emailCadastro = document.getElementById('emailCadastro').value;
   const senhaCadastro = document.getElementById('senhaCadastro').value;
 
-  // Validação básica - você pode adicionar validações mais robustas
+  // Validação básica 
   if (!nome || !emailCadastro || !senhaCadastro) {
     alert('Por favor, preencha todos os campos.');
     return;
