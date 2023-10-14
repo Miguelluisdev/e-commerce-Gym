@@ -1,6 +1,5 @@
 
 
-
 // Função para validar o cadastro e salvar os dados no localStorage
 // Função para validar o cadastro e salvar os dados no localStorage
 function cadastrarUsuario() {
@@ -38,7 +37,6 @@ document.getElementById('cadastroForm').addEventListener('submit', function (e) 
 function fazerLogin() {
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
-
   const usuarioSalvo = JSON.parse(localStorage.getItem('usuario'));
 
   if (!usuarioSalvo || email !== usuarioSalvo.email || senha !== usuarioSalvo.senha) {
@@ -56,13 +54,15 @@ function fazerLogin() {
   document.getElementById('loginModal').classList.remove('show');
   document.body.classList.remove('modal-open');
   document.querySelector('.modal-backdrop').remove();
+
 }
 
 // Recuperar o nome do usuário do localStorage e preencher o ícone do usuário
-const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
-if (nomeUsuarioSalvo) {
-  document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
-}
+// const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
+// if (nomeUsuarioSalvo) {
+//   document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
+// }
+
 
 // Evento de clique no botão de login
 document.getElementById('loginForm').addEventListener('submit', function (e) {
@@ -71,6 +71,40 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
   alert("Clique no seu nome para voltar a usar o site");
 });
 
+// Função para realizar o logout
+function fazerLogout() {
+  // Remover o nome do usuário do ícone do usuário
+  document.querySelector('.users .nav-link i').textContent = '';
+
+  // Fechar o modal de login
+  document.getElementById('loginModal').classList.remove('show');
+  document.body.classList.remove('modal-open');
+  document.querySelector('.modal-backdrop').remove();
+}
+
+// Evento de clique no botão de logout
+document.getElementById('btn_logout').addEventListener('click', function (e) {
+  e.preventDefault();
+  fazerLogout();
+  alert('Você foi deslogado com sucesso.');
+
+  // Remover os dados do usuário do localStorage
+  localStorage.removeItem('nomeUsuario');
+});
+
+// Recuperar o nome do usuário do localStorage e preencher o ícone do usuário
+const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
+if (nomeUsuarioSalvo) {
+  document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
+}
+
+// Evento de clique no ícone de usuário para voltar a usar o site
+document.querySelector('.users .nav-link i').addEventListener('click', function () {
+  if (!localStorage.getItem('usuario')) {
+    // Usuário não está logado, abrir o modal de login
+    document.getElementById('loginModal').classList.add('show');
+  }
+});
 
 // Seletor do botão e do documento
 const scrollToTopButton = document.querySelector('.scrollTop');
@@ -380,3 +414,4 @@ setInterval(() => {
   timeUntilTomorrow
   showNotification();
 }, 60000);
+
