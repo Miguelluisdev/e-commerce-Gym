@@ -1,34 +1,37 @@
 
-
+// Função para validar o cadastro e salvar os dados no localStorage
 function cadastrarUsuario() {
   const nome = document.getElementById('nome').value;
   const emailCadastro = document.getElementById('emailCadastro').value;
   const senhaCadastro = document.getElementById('senhaCadastro').value;
 
-
+  // Validação básica 
   if (!nome || !emailCadastro || !senhaCadastro) {
     alert('Por favor, preencha todos os campos.');
     return;
   }
 
+  // Criar um objeto de usuário
   const usuario = {
     nome: nome,
     email: emailCadastro,
     senha: senhaCadastro,
   };
 
-  
+  // Salvar o usuário no localStorage
   localStorage.setItem('usuario', JSON.stringify(usuario));
 
-
+  // Fechar o modal de cadastro automaticamente (não é mais necessário remover classes manualmente)
   document.getElementById('cadastroConcluidoModal').classList.add('show');
 }
 
+// Evento de clique no botão de cadastro
 document.getElementById('cadastroForm').addEventListener('submit', function (e) {
   e.preventDefault();
   cadastrarUsuario();
 });
 
+// Função para validar o login
 function fazerLogin() {
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
@@ -39,66 +42,73 @@ function fazerLogin() {
     return;
   }
 
-
+  // Preencher o nome do usuário no ícone de usuário
   document.querySelector('.users .nav-link i').textContent = usuarioSalvo.nome;
 
- 
+  // Salvar o nome do usuário no localStorage
   localStorage.setItem('nomeUsuario', usuarioSalvo.nome);
 
-  
+  // Fechar o modal de login automaticamente
   document.getElementById('loginModal').classList.remove('show');
   document.body.classList.remove('modal-open');
   document.querySelector('.modal-backdrop').remove();
 
 }
 
+// Recuperar o nome do usuário do localStorage e preencher o ícone do usuário
+// const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
+// if (nomeUsuarioSalvo) {
+//   document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
+// }
 
 
-
+// Evento de clique no botão de login
 document.getElementById('loginForm').addEventListener('submit', function (e) {
   e.preventDefault();
   fazerLogin();
   alert("Clique no seu nome para voltar a usar o site");
 });
 
-
+// Função para realizar o logout
 function fazerLogout() {
-
+  // Remover o nome do usuário do ícone do usuário
   document.querySelector('.users .nav-link i').textContent = '';
 
+  // Fechar o modal de login
   document.getElementById('loginModal').classList.remove('show');
   document.body.classList.remove('modal-open');
   document.querySelector('.modal-backdrop').remove();
 }
 
-
+// Evento de clique no botão de logout
 document.getElementById('btn_logout').addEventListener('click', function (e) {
   e.preventDefault();
   fazerLogout();
   alert('Você foi deslogado com sucesso.');
 
-
+  // Remover os dados do usuário do localStorage
   localStorage.removeItem('nomeUsuario');
 });
 
-
+// Recuperar o nome do usuário do localStorage e preencher o ícone do usuário
 const nomeUsuarioSalvo = localStorage.getItem('nomeUsuario');
 if (nomeUsuarioSalvo) {
   document.querySelector('.users .nav-link i').textContent = nomeUsuarioSalvo;
 }
 
-
+// Evento de clique no ícone de usuário para voltar a usar o site
 document.querySelector('.users .nav-link i').addEventListener('click', function () {
   if (!localStorage.getItem('usuario')) {
-   
+    // Usuário não está logado, abrir o modal de login
     document.getElementById('loginModal').classList.add('show');
   }
 });
 
+// Seletor do botão e do documento
 const scrollToTopButton = document.querySelector('.scrollTop');
 const rootElement = document.documentElement;
 
-
+// Função para rolar para o topo da página
 function scrollToTop() {
   rootElement.scrollTo({
     top: 0,
@@ -109,10 +119,10 @@ function scrollToTop() {
 
 window.addEventListener('scroll', () => {
   if (rootElement.scrollTop > 100) {
-
+    // Exibir o botão quando o usuário rolar mais de 100px da parte superior
     scrollToTopButton.classList.add('show');
   } else {
-  
+    // Ocultar o botão se o usuário estiver no topo da página
     scrollToTopButton.classList.remove('show');
   }
 });
@@ -120,7 +130,7 @@ window.addEventListener('scroll', () => {
 
 scrollToTopButton.addEventListener('click', scrollToTop);
 
-
+// imc calc
 const data = [
   {
     min: 0,
@@ -159,7 +169,7 @@ const data = [
   },
 ];
 
-
+// Seleção de elementos
 const imcTable = document.querySelector("#imc-table");
 
 const heightInput = document.querySelector("#height");
@@ -292,7 +302,7 @@ backBtn.addEventListener("click", (e) => {
   showOrHideResults();
 });
 
-
+// personal cards
 
 const paineis = document.querySelectorAll(".painel");
 
@@ -307,7 +317,7 @@ function removeActiveClasses(){
     painel.classList.remove("active")
   })
 }
-
+// depoiment cards
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 let currentIndex = 0;
@@ -321,15 +331,15 @@ function updateSlider() {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-
+// Avançar automaticamente os slides a cada 5 segundos
 setInterval(nextSlide, 5000);
 
-
+// btn location
 document.getElementById("btn-mod").addEventListener("click", function(){
   window.location = "./src/modalidades.html"
 })
 
-
+// contact form
 class FormValidator {
   constructor(form) {
     this.form = form;
@@ -352,13 +362,13 @@ class FormValidator {
     const email = this.form.elements["email"].value;
     const message = this.form.elements["message"].value;
 
-  
+    // Verifique se os campos obrigatórios estão preenchidos
     if (name === "" || email === "" || message === "") {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return false;
     }
 
-
+    // Valide o formato do email usando regex
     if (!email.match(this.emailRegex)) {
       alert("Por favor, insira um endereço de email válido.");
       return false;
@@ -372,32 +382,32 @@ const contactForm = document.forms["contactForm"];
 const validator = new FormValidator(contactForm);
 console.log(validator)
 
-
+// Função para exibir a notificação
 function showNotification() {
   const notification = document.querySelector('.notification');
   notification.style.display = 'block';
 }
 
-
+// Fechar a notificação
 document.querySelector('#close').addEventListener('click', function() {
   const notification = document.querySelector('.notification');
   notification.style.display = 'none';
 });
 
-
+// Calcule o tempo restante até o próximo dia
 function calculateTimeUntilNextDay() {
   const now = new Date();
   const tomorrow = new Date(now);
   tomorrow.setDate(now.getDate() + 1);
-  tomorrow.setHours(9); 
+  tomorrow.setHours(9); // Define a hora da sessão de treinamento no próximo dia
 
   const timeUntilTomorrow = tomorrow - now;
   return timeUntilTomorrow;
 }
 
-
+// Agende o lembrete para ser exibido
 const timeUntilTomorrow = calculateTimeUntilNextDay();
-
+// Agende o lembrete para ser exibido (no exemplo, após 3 segundos)
 setInterval(() => {
   timeUntilTomorrow
   showNotification();
